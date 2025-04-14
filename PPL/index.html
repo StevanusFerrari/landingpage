@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelatihan HTML - Landing Page Sederhana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #2d6a4f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 0;
+            position: relative;
+        }
+        
+        nav .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 10px;
+        }
+        
+        nav .nav-links li {
+            margin: 0 10px;
+        }
+        
+        nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        #home {
+            background-color: #f0f0f0;
+            padding: 50px 20px;
+        }
+        
+        button {
+            background-color: #2d6a4f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .feature {
+            margin: 15px;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .service-card {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .service-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        
+        #services {
+            background-color: #f0f0f0;
+        }
+        
+        .testimonials {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .testimonial-card {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 300px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            display: block;
+        }
+        
+        #contact {
+            background-color: #2d6a4f;
+            color: white;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h2 {
+            margin-bottom: 20px;
+        }
+        
+        /* Media queries untuk responsif */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                text-align: right;
+            }
+            
+            nav .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav .nav-links.show {
+                display: flex;
+            }
+            
+            nav .nav-links li {
+                margin: 5px 0;
+            }
+            
+            .features {
+                flex-direction: column;
+            }
+            
+            .feature {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Belajar Membuat Landing Page</h1>
+        <p>Pelatihan HTML</p>
+    </header>
+
+    <!-- Navigasi -->
+    <nav>
+        <button class="hamburger">☰</button>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h2>Selamat Datang di Pelatihan Kami</h2>
+        <p>Mari belajar membuat website sederhana dengan HTML dasar</p>
+        <button>Mulai Belajar</button>
+    </section>
+
+    <!-- Tentang -->
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Kami adalah penyedia pelatihan pemrograman web untuk pemula yang ingin memulai karir di bidang teknologi.</p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>Mudah Dipahami</h3>
+                <p>Materi disampaikan dengan bahasa yang sederhana</p>
+            </div>
+            <div class="feature">
+                <h3>Praktik Langsung</h3>
+                <p>Belajar sambil langsung mempraktikkan kode</p>
+            </div>
+            <div class="feature">
+                <h3>Gratis</h3>
+                <p>Tidak ada biaya untuk pelatihan dasar</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="services">
+        <h2>Layanan Kami</h2>
+        
+        <div class="services-container">
+            <div class="service-card">
+                <img src="./img/dasar.jpg" alt="HTML Dasar">
+                <h3>HTML Dasar</h3>
+                <p>Belajar struktur dasar HTML</p>
+            </div>
+            <div class="service-card">
+                <img src="./img/form.png" alt="Form HTML">
+                <h3>Form HTML</h3>
+                <p>Membuat form interaktif</p>
+            </div>
+            <div class="service-card">
+                <img src="./img/tabel.jpeg" alt="Tabel HTML">
+                <h3>Tabel HTML</h3>
+                <p>Mengatur data dalam tabel</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section>
+        <h2>Apa Kata Peserta</h2>
+        
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <img src="./img/pp.jpg" alt="Budi">
+                <p>"Pelatihannya sangat mudah dipahami untuk pemula seperti saya."</p>
+                <p><strong>- Ferrari, Mahasiswa</strong></p>
+            </div>
+            <div class="testimonial-card">
+                <img src="./img/pp.jpg" alt="Ani">
+                <p>"Materinya praktis dan langsung bisa diaplikasikan."</p>
+                <p><strong>- Christianingrum, Guru</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact">
+        <h2>Hubungi Kami</h2>
+        <p>Email: info@pelatihanhtml.com</p>
+        <p>Telepon: (021) 123-456</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pelatihan HTML Dasar. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk toggle hamburger menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+
+        // Menutup menu saat link diklik
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>
